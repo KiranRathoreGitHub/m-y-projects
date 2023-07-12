@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+
+    <title>Food Chalange </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        footer {
+            background-color: rgb(139, 27, 27);
+            padding: 30px;
+
+        }
+
+        nav {
+            background-color: rgb(139, 27, 27);
+        }
+
+        span {
+            color: rgb(139, 27, 27);
+        }
+
+        .py {
+            line-height: 10%;
+            color: black;
+            font-style: bold;
+        }
+
+        .py:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .item {
+            background-color: white;
+            margin-top: 10px;
+            padding: 9px;
+        }
+
+        .item:hover {
+            background-color: rgb(139, 27, 27);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-rgb(139, 27, 27)">
+        <div class="container-fluid">
+            <img src="burger2.png" alt="" width="50" height="50" style="margin: 10px;">
+            <a class="navbar-brand" href="#">Foodie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Burger</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Pizza</a></li>
+                            <li><a class="dropdown-item" href="#">Deseart</a></li>
+                            <li><a class="dropdown-item" href="#">Cake</a></li>
+                            <li><a class="dropdown-item" href="#">Sandwich</a></li>
+                            <li><a class="dropdown-item" href="#">Muffin</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contect.html">Contect us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contect.html">Mob- 7417 081 616</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal"> Login</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to iCoder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with
+                                anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get an iCoder Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with
+                                anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">C.Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Creat Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Login Modal -->
+
+
+    <div class="container my-4">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h1 class="featurette-heading">Food is one of the basic necessities of life. <span
+                        class="color-rgb(139, 27, 27)">It
+                        Below your mind.</span></h1>
+                <p class="lead">Food is any substance consumed by an organism for nutritional
+                    support. Food is usually of plant, animal, or fungal origin and contains
+                    essential nutrients such as carbohydrates, fats, proteins, vitamins, or
+                    minerals. The substance is ingested by an organism and assimilated by the
+                    organism's cells to provide energy, maintain life, or stimulate growth.</p>
+                <div class="mx-2">
+                    <button class="btn btn-danger" style="background-color: rgb(139, 27, 27);" data-bs-toggle="modal"
+                        data-bs-target="#loginModal"> Register Now</button>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#signupModal"> Order
+                        Now</button>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="pasta.jpeg" alt="pasta pic" width="1000px" height="1200px">
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="container">
+        <h1 style="text-align: center;">About Us </h1>
+        <hr>
+        <h5><span style="font-size: xx-large;">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            tempora animi, atque sequi
+            quo vero sed maiores at voluptatum consequatur impedit quasi accusamus officiis totam
+            doloremque dolore sint! Sunt temporibus cum, officiis vel ad itaque ea ducimus
+            asperiores accusamus sed sequi beatae doloremque minima mollitia, consequuntur, qui quam
+            tempora adipisci magni? Pariatur deserunt sequi id aliquam ut error minus qui a
+            expedita, totam.</h5>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('food\ 4.jpeg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">Special HamBurger that you love most</h2>
+                        <div class="item" style="text-align: center;">
+                            <p class="py">Foodie Chanlange</p>
+                            <p class="py">min 20% discount</p>
+                            <p class="py">grab now</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('food\ 2.jpeg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">one penut butter pizza that you love most
+                        </h2>
+                        <div class="item" style="text-align: center;">
+                            <p class="py">Foodie Chanlange</p>
+                            <p class="py">min 20% discount</p>
+                            <p class="py">grab now</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('boul.jpeg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">one Unique dish that may
+                            be your Favourite</h2>
+                        <div class="item" style="text-align: center;">
+                            <p class="py">Foodie Chanlange</p>
+                            <p class="py">min 20% discount</p>
+                            <p class="py">grab now</p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('leaf.jpg')">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">one Unique dish that may
+                            be your Favourite</h2>
+
+                    </div>
+                    <div class="item" style="text-align: center;">
+                        <p class="py">Foodie Chanlange</p>
+                        <p class="py">min 20% discount</p>
+                        <p class="py">grab now</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('pasta.jpeg')">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">one Unique dish that may be your Favourite
+                        </h2>
+                        <div class="item" style="text-align: center;">
+                            <p class="py">Foodie Chanlange</p>
+                            <p class="py">min 20% discount</p>
+                            <p class="py">grab now</p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('food\ 2.jpeg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-10 lh-1 fw-bold">one Unique dish that may be your Favourite
+                        </h2>
+                        <div class="item" style="text-align: center;">
+                            <p class="py">Foodie Chanlange</p>
+                            <p class="py">min 20% discount</p>
+                            <p class="py">grab now</p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center;">Contect Us</h1>
+    <hr>
+    <footer class="">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 py-2">
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <div>
+                    <img src="facebook.png" alt="" width="60" height="60">
+                    <h4 class="fw-bold mb-0">facebook</h4>
+                    <p>https://www.facebook.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+                <div>
+                    <img src="you.png" alt="" width="60" height="60">
+                    <h4 class="fw-bold mb-0">Youtube</h4>
+                    <p>https://www.Youtube.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#calendar3"></use>
+                </svg>
+                <div>
+                    <img src="Twitter.png" alt="" width="60" height="60">
+                    <h4 class="fw-bold mb-0">Twitter</h4>
+                    <p>https://www.Twitter.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#home"></use>
+                </svg>
+                <div><img src="instagram.png" alt="" width="60" height="60">
+                    <h4 class="fw-bold mb-0">Instagram</h4>
+                    <p>https://www.instagram.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#speedometer2"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-0">Mobile Number</h4>
+                    <p>+91 7417 081 616</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#toggles2"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-0">E-mail address</h4>
+                    <p>kiranrathore1905@gmail.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#geo-fill"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-0">Address </h4>
+                    <p>Lakhurani, Shamsabad, Agra, Uttar Pradesh, India</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#tools"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-0">Other Information</h4>
+                    <p>Paragraph of text beneath the heading to explain the heading.</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; ">Copyright &copy;2023; Designed by <span
+                style="color: black; font-size:larger">Kiran Rathore</span> </p>
+    </footer>
+
+
+
+</body>
+
+</html>
